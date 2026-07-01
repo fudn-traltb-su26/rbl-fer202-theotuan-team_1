@@ -1,0 +1,297 @@
+/* ========== NỀN MỜ (Overlay) ========== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0;
+  z-index: 9999;
+  animation: fadeIn 0.25s ease;
+}
+
+.modal-box {
+  position: relative;
+  background: #fff;
+  border-radius: 18px;
+  width: 400px;
+  max-width: 92%;
+  padding: 35px 32px 40px;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  overflow: visible;
+  animation: slideUp 0.25s ease;
+  z-index: 0;
+}
+
+/* gradient cam */
+.modal-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 45px;
+  width: 100%;
+  background: linear-gradient(90deg, #ff914d, #ffa85b);
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  z-index: 1; /* ✅ nâng lên để nền cam nằm dưới nút X */
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;            
+  right: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 5;          
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.1);
+}
+
+
+/* ========== TIÊU ĐỀ ========== */
+.modal-box h2 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 0.5px;
+}
+
+/* ========== INPUT FORM ========== */
+.modal-box input {
+  width: 100%;
+  padding: 11px 13px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  background: #fafafa;
+  transition: 0.25s;
+}
+
+.modal-box input:focus {
+  border-color: #ff914d;
+  background: #fff;
+  box-shadow: 0 0 6px rgba(255, 145, 77, 0.3);
+  outline: none;
+}
+
+/* ========== NÚT CHÍNH (Đăng nhập) ========== */
+.modal-box button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #ff914d, #ffb26b);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(255, 145, 77, 0.35);
+  transition: all 0.25s ease;
+}
+
+.modal-box button[type="submit"]:hover {
+  background: linear-gradient(90deg, #ff832d, #ffab58);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(255, 145, 77, 0.45);
+}
+
+/* ✅ ========== NÚT PHỤ (Gửi OTP, Xác nhận OTP, Xác nhận đặt lại) ========== */
+.modal-box button:not(.google-login-btn) {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #ff914d, #ffb26b);
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  box-shadow: 0 3px 10px rgba(255, 145, 77, 0.35);
+  transition: all 0.25s ease;
+}
+
+.modal-box button:not(.google-login-btn):hover {
+  background: linear-gradient(90deg, #ff832d, #ffab58);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(255, 145, 77, 0.45);
+}
+
+/* ========== THÔNG ĐIỆP TRẠNG THÁI ========== */
+.message {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #d63031;
+}
+
+/* ========== LIÊN KẾT CHUYỂN TRANG ========== */
+.switch-link {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+
+.switch-link span {
+  color: #ff914d;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.switch-link span:hover {
+  text-decoration: underline;
+}
+
+/* ========== GOOGLE LOGIN SECTION ========== */
+.google-section {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.google-divider {
+  margin: 15px 0 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+  position: relative;
+}
+
+.google-divider::before,
+.google-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: #ddd;
+}
+
+.google-divider::before {
+  left: 0;
+}
+.google-divider::after {
+  right: 0;
+}
+
+.google-btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* ========== HIỆU ỨNG ========== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.forgot-password-link {
+  margin-top: 10px;
+  text-align: right;
+  font-size: 14px;
+  color: #ff914d;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
+.back-to-login {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  cursor: pointer;
+}
+
+.back-to-login:hover {
+  color: #ff914d;
+}
+
+.otp-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.otp-input {
+  width: 45px;
+  height: 50px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.otp-input:focus {
+  border-color: #ff914d;
+  box-shadow: 0 0 6px rgba(255,145,77,0.3);
+}
+
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+.password-field input {
+  width: 100%;
+  padding-right: 40px; /* chừa chỗ cho icon 👁️ */
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  font-size: 16px;
+  transition: 0.2s;
+}
+
+.toggle-password:hover {
+  color: #ff914d;
+}

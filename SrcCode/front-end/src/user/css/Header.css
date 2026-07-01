@@ -1,0 +1,117 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: white;
+  backdrop-filter: blur(25px);
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgba(224, 163, 255, 0.15);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.4s ease;
+  min-height: 70px;
+  overflow: visible; /* ✅ cho phép dropdown hiển thị */
+
+}
+
+/* Brand Section - Compact */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  background: rgb(255, 115, 0);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: black;
+  box-shadow: 0 4px 15px rgba(255, 115, 1, 0.5);
+  transition: all 0.3s ease;
+  animation: logoGlow 3s ease-in-out infinite;
+}
+
+.logo:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.brand>div:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.subtitle {
+  font-size: 0.7rem;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-top: -2px;
+}
+
+/* Search & Auth Section - Compact */
+.search-login {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-input {
+  width: 300px;
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgb(255, 140, 66, 0.5);
+  border-radius: 25px;
+  color: #2d3436;
+  font-family: inherit;
+  font-size: 0.9rem;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #ff8c42;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.search-input::placeholder {
+  color: #636e72;
+}
+
+.auth-links {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.auth-link {
+  background: transparent;
+  border: none;
+  color: black;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 8px 18px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.auth-link:hover {
+  background: rgba(255, 140, 66, 0.1);
+  box-shadow: 0 0 15px rgba(255, 140, 66, 0.3);
+  transform: translateY(-2px);
+}
+
+.divider {
+  color: rgba(255, 140, 66, 0.4);
+  font-size: 1.1rem;
+}

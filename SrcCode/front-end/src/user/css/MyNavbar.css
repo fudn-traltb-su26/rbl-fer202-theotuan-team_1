@@ -1,0 +1,55 @@
+/* Navigation Links Container */
+.nav-links {
+  background: white;
+  padding: 1rem 3rem;
+  display: flex;
+  gap: 2.5rem;
+  box-shadow: 0 2px 12px rgba(255, 140, 66, 0.1);
+  border-bottom: 2px solid #ffe8df;
+  align-items: center;
+}
+
+/* Navigation Link Items */
+.nav-links a {
+  color: #333333;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 15px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  border: 1px solid transparent;
+}
+
+.nav-links a:hover {
+  background: rgba(255, 140, 66, 0.12);
+  transform: translateY(-2px);
+  border-color: rgba(255, 140, 66, 0.2);
+}
+
+.nav-links button {
+  margin-left: auto;
+  padding: 0.6rem 1.5rem;
+  border: 2px solid #ff8c42;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #ff8c42, #ffa726);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-family: inherit;
+}
+
+.nav-links button:hover {
+  background: white;
+  color: #ff8c42;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 140, 66, 0.3);
+}
+.nav-links button + button {
+  margin-left: 0.1rem;
+}
